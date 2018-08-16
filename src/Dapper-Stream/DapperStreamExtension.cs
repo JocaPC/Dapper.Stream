@@ -31,7 +31,8 @@ namespace Dapper
             foreach (var s in connection.Query<string>(sql, param, transaction, buffered, commandTimeout, commandType))
             {
                 empty = false;
-                stream.Write(System.Text.Encoding.UTF8.GetBytes(s), 0, s.Length);
+                byte[] c = System.Text.Encoding.UTF8.GetBytes(s);
+                stream.Write(c, 0, c.Length);
             }
             if (empty)
                 stream.Write(System.Text.Encoding.UTF8.GetBytes(defaultOutput), 0, defaultOutput.Length);
@@ -57,7 +58,8 @@ namespace Dapper
             foreach (var s in connection.QueryAsync<string>(query, param, transaction, commandTimeout, commandType).Result)
             {
                 empty = false;
-                await stream.WriteAsync(System.Text.Encoding.UTF8.GetBytes(s), 0, s.Length);
+                byte[] c = System.Text.Encoding.UTF8.GetBytes(s);
+                await stream.WriteAsync(c, 0, c.Length);
             }
             if (empty)
                 await stream.WriteAsync(System.Text.Encoding.UTF8.GetBytes(defaultOutput), 0, defaultOutput.Length);

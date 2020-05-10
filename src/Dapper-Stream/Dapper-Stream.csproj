@@ -1,20 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net46;netstandard1.6;netcoreapp1.0;netcoreapp1.1;netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>net46;netstandard1.6;netcoreapp1.0;netcoreapp1.1;netcoreapp2.0;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp3.0;netcoreapp3.1</TargetFrameworks>
     <RootNamespace>Dapper</RootNamespace>
     <AssemblyName>Dapper-Stream</AssemblyName>
     <PackageId>Dapper.Stream</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Jovan Popovic</Authors>
-    <Version>0.2</Version>
+    <Version>0.3</Version>
     <Description>DapperORM extension that enables pushing results into a stream.</Description>
     <PackageTags>SqlServer,REST,C#,Dapper,JSON</PackageTags>
     <RepositoryUrl>https://github.com/JocaPC/Dapper.Stream</RepositoryUrl>
     <PackageProjectUrl>https://github.com/JocaPC/Dapper.Stream</PackageProjectUrl>
     <Copyright>Jovan Popovic</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseUrl>https://github.com/JocaPC/Dapper.Stream/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net46|AnyCPU'">
